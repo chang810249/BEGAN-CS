@@ -20,7 +20,7 @@ def slerp(val, low, high):
 class BEGAN_CS(object):
     model_name = "BEGAN_CS"     # name for checkpoint
 
-    def __init__(self, sess, epoch, batch_size, z_dim, dataset_name, checkpoint_dir, WGAN_para, g_lr, d_lr, result_dir, log_dir):
+    def __init__(self, sess, epoch, batch_size, z_dim, dataset_name, checkpoint_dir, g_lr, d_lr, result_dir, log_dir):
         self.epoch = epoch
         self.batch_size = batch_size
 

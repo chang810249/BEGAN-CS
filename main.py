@@ -31,7 +31,6 @@ def parse_args():
                         help='Directory name to save the generated images')
     parser.add_argument('--log_dir', type=str, default='logs',
                         help='Directory name to save training logs')
-    parser.add_argument('--WGAN_para', type=float, default=0.5, help='The rate of WGAN')
     parser.add_argument('--g_lr', type=float, default=0.0001, help='The learning rate of generator')
     parser.add_argument('--d_lr', type=float, default=0.0001, help='The learning rate of discriminator')
     parser.add_argument('--train', type=str2bool, default=True)
@@ -86,7 +85,6 @@ def main():
                             dataset_name=args.dataset,
                             checkpoint_dir=args.checkpoint_dir,
                             result_dir=args.result_dir,
-                            WGAN_para=args.WGAN_para,
                             log_dir=args.log_dir,
                             g_lr=args.g_lr,
                             d_lr=args.d_lr)
