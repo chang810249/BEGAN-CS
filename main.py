@@ -56,9 +56,6 @@ def main():
     if args is None:
       exit()
 
-    # open session
-    models = [BEGAN_CS]
-
     seed = 124
     tf.set_random_seed(seed)
     np.random.seed(seed)
