@@ -1,11 +1,7 @@
-import os
-
-## GAN Variants
 from BEGAN_CS import BEGAN_CS
-
 from utils import show_all_variables
 from utils import check_folder
-
+import os
 import tensorflow as tf
 import argparse
 import numpy as np
@@ -13,13 +9,10 @@ import numpy as np
 def str2bool(v):
     return v.lower() in ('true', '1')
 
-"""parsing and configuration"""
 def parse_args():
     desc = "Tensorflow implementation of GAN collections"
     parser = argparse.ArgumentParser(description=desc)
 
-    parser.add_argument('--gan_type', type=str, default='BEGAN_CS',
-                        help='The type of GAN', required=True)
     parser.add_argument('--dataset', type=str, default='celebA',
                         help='The name of dataset')
     parser.add_argument('--epoch', type=int, default=20, help='The number of epochs to run')
@@ -36,7 +29,6 @@ def parse_args():
     parser.add_argument('--train', type=str2bool, default=True)
     return check_args(parser.parse_args())
 
-"""checking arguments"""
 def check_args(args):
     # --checkpoint_dir
     check_folder(args.checkpoint_dir)
@@ -58,7 +50,6 @@ def check_args(args):
 
     return args
 
-"""main"""
 def main():
     # parse arguments
     args = parse_args()
@@ -73,23 +64,16 @@ def main():
     np.random.seed(seed)
 
     with tf.Session(config=tf.ConfigProto(allow_soft_placement=True)) as sess:
-
-        # declare instance for GAN
-        gan = None
-        for model in models:
-            if args.gan_type == model.model_name:
-                gan = model(sess,
-                            epoch=args.epoch,
-                            batch_size=args.batch_size,
-                            z_dim=args.z_dim,
-                            dataset_name=args.dataset,
-                            checkpoint_dir=args.checkpoint_dir,
-                            result_dir=args.result_dir,
-                            log_dir=args.log_dir,
-                            g_lr=args.g_lr,
-                            d_lr=args.d_lr)
-        if gan is None:
-            raise Exception("[!] There is no option for " + args.gan_type)
+        gan = BEGAN_CS(sess,
+                    epoch=args.epoch,
+                    batch_size=args.batch_size,
+                    z_dim=args.z_dim,
+                    dataset_name=args.dataset,
+                    checkpoint_dir=args.checkpoint_dir,
+                    result_dir=args.result_dir,
+                    log_dir=args.log_dir,
+                    g_lr=args.g_lr,
+                    d_lr=args.d_lr)
 
         # build graph
         gan.build_model()
