@@ -1,5 +1,7 @@
-# [Escaping from Collapsing Modes in a Constrained Space](https://arxiv.org/abs/1808.07258)
+# Escaping from Collapsing Modes in a Constrained Space
 [Chia-Che Chang*](http://chang810249.github.io), [Chieh Hubert Lin*](https://hubert0527.github.io), [Che-Rung Lee](http://www.cs.nthu.edu.tw/~cherung/), [Da-Cheng Juan](https://ai.google/research/people/DaChengJuan), [Wei Wei](https://ai.google/research/people/105672), [Hwann-Tzong Chen](http://www.cs.nthu.edu.tw/~htchen/)
+
+The authors' TensorFlow implementation of ECCV'18 paper, "[Escaping from Collapsing Modes in a Constrained Space](https://arxiv.org/abs/1808.07258)".
 
 ** This is not an official Google product **
 
