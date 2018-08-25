@@ -1,0 +1,10 @@
+# download CelebA dataset
+python download.py
+
+# train CelebA
+./train.sh
+
+# test Model
+./test.sh
+
+
