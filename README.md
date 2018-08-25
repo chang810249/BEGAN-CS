@@ -5,9 +5,15 @@ The authors' TensorFlow implementation of ECCV'18 paper, "[Escaping from Collaps
 
 ** This is not an official Google product **
 
-Training: train.sh
+## How to Use
 
-Testing: test.sh
+```
+    # Training: 
+    ./train.sh
+   
+    # Testing: 
+    ./test.sh
+```
 
 ## PCA Visualization
 <p align="center">
