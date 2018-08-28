@@ -8,6 +8,9 @@ The authors' TensorFlow implementation of ECCV'18 paper, "[Escaping from Collaps
 ## How to Use
 
 ```
+    # download CelebA dataset
+    python download.py
+    
     # Training: 
     ./train.sh
    
