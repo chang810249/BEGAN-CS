@@ -95,6 +95,16 @@ The authors' TensorFlow implementation of ECCV'18 paper, "[Escaping from Collaps
 
 -->
 
+### Citation
+```
+@InProceedings{Chang_2018_ECCV,
+author = {Chang, Chia-Che and Hubert Lin, Chieh and Lee, Che-Rung and Juan, Da-Cheng and Wei, Wei and Chen, Hwann-Tzong},
+title = {Escaping from Collapsing Modes in a Constrained Space},
+booktitle = {The European Conference on Computer Vision (ECCV)},
+month = {September},
+year = {2018}
+}
+```
 ### Reference
 > 1. [syentic dataset](https://github.com/akashgit/VEEGAN)
 > 2. [BEGAN](https://github.com/carpedm20/BEGAN-tensorflow)
